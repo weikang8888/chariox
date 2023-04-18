@@ -1,0 +1,46 @@
+[data-aos="homepage-animation1"] {
+  transform: translateX(-100%) rotate(-225deg);
+  transition-property: transform;
+}
+[data-aos="homepage-animation1"].aos-animate {
+  transform: translateX(0) rotate(0deg);
+}
+
+[data-aos="homepage-animation2"] {
+  transform: translateX(100%) rotate(225deg);
+  transition-property: transform;
+}
+[data-aos="homepage-animation2"].aos-animate {
+  transform: translateX(0) rotate(0deg);
+}
+
+[data-aos="homepage-animation3"] {
+  transform: rotate(360deg) scale(0.5);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="homepage-animation3"].aos-animate {
+  transform: rotate(0) scale(1);
+  opacity: 1;
+}
+
+[data-aos="atmt-tyre-animation1"] {
+  transform: translateX(100px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="atmt-tyre-animation1"].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-aos="atmt-tyre-animation2"] {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  [data-aos="atmt-tyre-animation2"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "draco";
+  src: url(../font/Draco.otf);
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../font/Montserrat-Regular.otf);
+}
+
+@font-face {
+  font-family: "youshebiaotihei";
+  src: url(../font/YouSheBiaoTiHei-2.ttf);
+}
+
+@font-face {
+  font-family: "antique";
+  src: url(../font/Antique\ Olive\ Std\ Nord\ Italic.otf);
+}
