@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="static/css/about-us.css" />
     <link rel="stylesheet" href="static/css/bootstrap.css" />
     <link rel="stylesheet" href="static/css/font.css" />
+    <link rel="stylesheet" href="static/css/aos-animate.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -16,7 +18,8 @@
 
   <body class="">
     <!-- Topbar Start -->
-    <div class="container-fluid px-0 d-none d-lg-block top-header top-header-otherpage">
+    <div
+      class="container-fluid px-0 d-none d-lg-block top-header top-header-otherpage">
       <div class="row gx-0 align-items-center">
         <div class="col-lg-4 text-center">
           <div class="d-inline-flex align-items-center justify-content-center">
@@ -250,7 +253,10 @@
                   created to conquer
                 </h2>
               </div>
-              <div class="col-5 find-absolute-right">
+              <div
+                class="col-5 find-absolute-right"
+                data-aos="homepage-animation3"
+                data-aos-duration="400">
                 <img class="mt-light" src="static/images/mt-tyre-light.png" />
               </div>
             </div>
@@ -376,4 +382,30 @@
       <!-- Footer End -->
     </article>
   </body>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: true,
+    });
+  </script>
+
+  <script>
+    //common reveal options to create reveal animations
+    ScrollReveal({
+      //reset: true,
+      distance: "500px",
+      duration: 1000,
+      delay: 400,
+    });
+
+    //target elements, and specify options to create reveal animations
+    ScrollReveal().reveal(".find-absolute-left h2", {
+      delay: 200,
+      origin: "left",
+      interval: 100,
+    });
+  </script>
 </html>
