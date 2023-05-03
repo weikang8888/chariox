@@ -1222,6 +1222,16 @@ video {
   height: 70vh;
 }
 
+.success-message{
+  color:var(--bs-successgreen);
+  background: var(--bs-green);
+}
+
+.error-message{
+  color:var(--bs-error-red);
+  background: var(--bs-red);
+}
+
 #map {
   height: 100%;
   width: 100%;
