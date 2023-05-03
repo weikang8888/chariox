@@ -235,6 +235,10 @@
         <div id="map"></div>
       </section>
     </div>
+
+    <!-- Footer Start -->
+    <?php include 'footer.php'?>
+   <!-- Footer End -->
   </body>
 
   <script src="static/js/map.js"></script>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/bootstrap.css" />
     <link rel="stylesheet" href="static/css/font.css" />
+    <link rel="stylesheet" href="static/css/progressbar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -17,94 +18,16 @@
 
   <body>
     <!-- Topbar Start -->
-    <div
-      class="container-fluid px-0 d-none d-lg-block top-header top-header-otherpage">
-      <div class="row gx-0 align-items-center">
-        <div class="col-lg-4 text-center">
-          <div class="d-inline-flex align-items-center justify-content-center">
-            <i class="bi bi-envelope fs-1 text-primary me-3"></i>
-            <div class="text-start">
-              <!-- <h6 class="content-title mb-1 fw-bolder text-black">Email Us</h6> -->
-              <span class="text-black">info@example.com</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center border-inner">
-          <div class="d-inline-flex align-items-center justify-content-center">
-            <a href="index.html" class="navbar-brand">
-              <img src="static/images/logo-b.png" class="logo" />
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center">
-          <div class="d-inline-flex align-items-center justify-content-center">
-            <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
-            <div class="header-find fw-bolder">
-              <div class="right-find">SIZES / SPEC</div>
-              <div class="left-find">FIND A STORE</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav
-        class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-3 px-lg-0 navbar-otherpage">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
-          <h1 class="m-0 text-uppercase text-white">
-            <i class="fa fa-birthday-cake fs-1 text-primary me-3"></i>
-            Chariox
-          </h1>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto mx-lg-auto py-0">
-            <a
-              href="index.html"
-              class="nav-item nav-link active nav-pd fw-bolder">
-              Home
-            </a>
-            <a href="about-us.html" class="nav-item nav-link nav-pd fw-bolder">
-              About
-            </a>
-            <a href="tyre.html" class="nav-item nav-link nav-pd fw-bolder">
-              Tyre
-            </a>
-            <a href="gallery.html" class="nav-item nav-link nav-pd fw-bolder">
-              Gallery
-            </a>
-            <a
-              href="find-dealer.html"
-              class="nav-item nav-link nav-pd fw-bolder">
-              Find Dealers
-            </a>
-            <a
-              href="tech-knowledge.html"
-              class="nav-item nav-link nav-pd fw-bolder">
-              Tech & Knowledge
-            </a>
-            <a
-              href="contact-us.html"
-              class="nav-item nav-link nav-pd fw-bolder">
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <?php include 'header.php'?>
     <!-- Topbar End -->
 
     <article class="chariox-content background-black">
-      <div class="tyre-mt-banner">
+      <div class="tyre-at-banner">
         <div class="container">
           <div class="row text-center justify-content-center">
             <div
               class="at-mt-title d-sm-flex align-items-center absolute-bottom">
-              Lexio M
+              Lexio A
               <div class="slash">/</div>
               T
             </div>
@@ -131,13 +54,13 @@
             <img
               data-aos="zoom-in-up"
               data-aos-duration="800"
-              src="static/images/tyre/mt-content-tyre.png"
-              class="mt-content-tyre" />
+              src="static/images/tyre/at-content-tyre.png"
+              class="at-content-tyre" />
             <img
               data-aos="zoom-in-down"
               data-aos-duration="400"
-              src="static/images/tyre/mt-content-ground.png"
-              class="mt-content-ground" />
+              src="static/images/tyre/at-content-ground.png"
+              class="at-content-ground" />
           </div>
         </div>
       </div>
@@ -145,36 +68,33 @@
       <div class="at-content-container-2">
         <div class="container">
           <div class="row relative justify-content-between at-content-2-height">
+            <div class="col-5 text-end fst-italic">
+              <p class="text-uppercase mb-0">Features & Benefits</p>
+              <p class="fw-bolder text-uppercase">Go Above and Beyond</p>
+              <p class="text-uppercase">Proven Performance,Bold Identity</p>
+              <p class="fs-6">
+                The Lexio A/T staggered shoulder lugs provides enhanced off-road
+                traction and the bold sidewall lugs give it eye-catching
+                aesthetics.
+              </p>
+            </div>
             <div class="col-6 relative">
               <img
-                data-aos="fade-down-right"
+                data-aos="fade-down-left"
                 data-aos-duration="800"
-                src="static/images/tyre/mt-content-2-tyre.png"
-                class="mt-content-2-tyre" />
+                src="static/images/tyre/at-content-2-tyre.png"
+                class="at-content-2-tyre" />
               <img
-                data-aos="fade-up-right"
+                data-aos="fade-up-left"
                 data-aos-duration="200"
-                src="static/images/tyre/mt-content-2-ground.png"
-                class="mt-content-2-ground" />
+                src="static/images/tyre/at-content-2-ground.png"
+                class="at-content-2-ground" />
               <img
                 data-aos="fade-down"
                 data-aos-duration="2000"
                 data-aos-delay="400"
                 src="static/images/tyre/at-content-2-zoom.png"
-                class="mt-content-2-zoom" />
-            </div>
-            <div class="col-5 text-start fst-italic">
-              <p class="text-uppercase mb-0">Features & Benefits</p>
-              <p class="fw-bolder text-uppercase">Choose Any Line</p>
-              <p class="text-uppercase">Aggressive sidewall lugs</p>
-              <p class="fs-6">
-                The sidewall design is as important as the thread pattern for
-                maximum off-road performance. The Lexio mud terrain tyre has one
-                of the most aggressive and functional sidewall designs on the
-                market.The massive side lugs provide additional biting
-                edges,which is especially helpful in rocky terrain.The
-                addiditonal depth also provides punctured resistance.
-              </p>
+                class="at-content-2-zoom" />
             </div>
           </div>
         </div>
@@ -183,34 +103,37 @@
       <div class="at-content-container-3">
         <div class="container">
           <div class="row relative justify-content-between at-content-3-height">
-            <div class="col-6 relative">
-              <div class="at-content-border"></div>
-              <img
-                data-aos="atmt-tyre-animation2"
-                data-aos-duration="800"
-                src="static/images/tyre/at-content-3-car.png"
-                class="atmt-content-car-2" />
-            </div>
             <div class="col-6 text-center fst-italic">
               <div class="at-content-3-text">
                 <p class="text-uppercase mb-0">Features & Benefits</p>
-                <p class="fw-bolder text-uppercase">Always Clawing Forward</p>
-                <p class="text-uppercase">Off-Road Traction</p>
-                <p class="fs-6 px-sm-4">
-                  The tread blocks are arranged to keep part od the lugs biting
-                  the ground at all times.
+                <p class="fw-bolder text-uppercase">Style,Meet Toughness</p>
+                <p class="text-uppercase">Large Tread and Shoulder Blocks</p>
+                <p class="fs-6">
+                  Large shoulder and tread blocks with optimized siping results
+                  in better handling and more stable performance inboth wet and
+                  dry conditions.It also results in an aggressive tread pattern
+                  design that stands out from other all-terrain light truck
+                  tyre.
                 </p>
               </div>
               <img
                 data-aos="zoom-in-up"
                 data-aos-duration="800"
                 src="static/images/tyre/at-content-3-tyre.png"
-                class="mt-content-3-tyre" />
+                class="at-content-3-tyre" />
               <img
                 data-aos="zoom-in-down"
                 data-aos-duration="400"
-                src="static/images/tyre/mt-content-3-ground.png"
-                class="mt-content-3-ground" />
+                src="static/images/tyre/at-content-3-ground.png"
+                class="at-content-3-ground" />
+            </div>
+            <div class="col-6 relative">
+              <div class="at-content-border"></div>
+              <img
+                data-aos="atmt-tyre-animation1"
+                data-aos-duration="800"
+                src="static/images/tyre/at-content-3-car.png"
+                class="atmt-content-car" />
             </div>
           </div>
         </div>
@@ -219,6 +142,14 @@
       <div class="at-content-container-4">
         <div class="container">
           <div class="row relative justify-content-between at-content-4-height">
+            <div class="col-6 relative">
+              <div class="at-content-border"></div>
+              <img
+                data-aos="atmt-tyre-animation2"
+                data-aos-duration="800"
+                src="static/images/tyre/at-content-3-car.png"
+                class="atmt-content-car-2" />
+            </div>
             <div class="col-6 text-center fst-italic">
               <div class="at-content-3-text">
                 <p class="text-uppercase mb-0">Features & Benefits</p>
@@ -236,20 +167,12 @@
                 data-aos="zoom-in-up"
                 data-aos-duration="800"
                 src="static/images/tyre/at-content-4-tyre.png"
-                class="at-content-4-tyre-2" />
+                class="at-content-4-tyre" />
               <img
                 data-aos="zoom-in-up"
                 data-aos-duration="400"
-                src="static/images/tyre/mt-content-4-ground.png"
-                class="mt-content-4-ground" />
-            </div>
-            <div class="col-6 relative">
-              <div class="at-content-border"></div>
-              <img
-                src="static/images/tyre/at-content-3-car.png"
-                class="atmt-content-car"
-                data-aos="atmt-tyre-animation1"
-                data-aos-duration="800" />
+                src="static/images/tyre/at-content-4-ground.png"
+                class="at-content-4-ground" />
             </div>
           </div>
         </div>
@@ -276,7 +199,7 @@
               </div>
             </div>
             <div class="col text-start">
-              <h2 class="content-title mb-5">Performance Gradings</h2>
+              <h2 class="content-title mb-4">Performance Gradings</h2>
               <div class="col-sm-11">
                 <ul class="ps-sm-0">
                   <li class="row my-2">
@@ -285,10 +208,10 @@
                         Dry Handling
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 70%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="70"
+                        data-target="70">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -299,10 +222,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Tread Wead</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 80%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="80"
+                        data-target="80">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -315,10 +238,10 @@
                         Ride Comfort
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 60%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="60"
+                        data-target="60">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -329,10 +252,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Wet Braking</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 70%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="70"
+                        data-target="70">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -343,10 +266,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Quiet Ride</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 65%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="65"
+                        data-target="65">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -359,10 +282,10 @@
                         Winter Performance
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 70%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="70"
+                        data-target="70">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -373,10 +296,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Off Road</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 90%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="90"
+                        data-target="90">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -389,10 +312,10 @@
                         Fuel Efficiency
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 60%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="60"
+                        data-target="60">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -405,14 +328,28 @@
           </div>
         </div>
       </div>
+      <!-- Footer Start -->
+      <?php include 'footer.php'?>
+      <!-- Footer End -->
     </article>
   </body>
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 3000,
       once: true,
+    });
+  </script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+  <script src="static/js/progressbar.js"></script>
+  <script>
+    // Display the progress bar calling progressbar.js
+    $(".progressbar1").progressBar({
+      shadow: true,
+      percentage: false,
+      animation: true,
     });
   </script>
 </html>

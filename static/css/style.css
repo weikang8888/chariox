@@ -551,6 +551,10 @@ video {
     max-width: 1507px !important;
   }
 }
+
+.footer-section {
+  background-color: var(--bs-black);
+}
 .footer-title {
   color: var(--bs-white);
   font-family: "montserrat";

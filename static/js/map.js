@@ -51,11 +51,11 @@ function initMap() {
   ];
 
   let normalIcon = {
-    url: "http://127.0.0.1:5501/static/images/other/map-marker.svg",
+    url: "http://localhost:8080/chariox/static/images/other/map-marker.svg",
     scaledSize: new google.maps.Size(50, 50), // scaled size
   };
   let selectedIcon = {
-    url: "http://127.0.0.1:5501/static/images/other/map-marker-selected.svg",
+    url: "http://localhost:8080/chariox/static/images/other/map-marker-selected.svg",
     scaledSize: new google.maps.Size(50, 50), // scaled size
   };
 
