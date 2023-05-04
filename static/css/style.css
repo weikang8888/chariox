@@ -1223,12 +1223,12 @@ video {
 }
 
 .success-message{
-  color:var(--bs-successgreen);
-  background: var(--bs-green);
+  color:var(--bs-green);
+  background: var(--bs-success);
 }
 
 .error-message{
-  color:var(--bs-error-red);
+  color:var(--bs-danger);
   background: var(--bs-red);
 }
 
