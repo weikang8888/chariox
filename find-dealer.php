@@ -29,7 +29,7 @@
         </div>
         <div class="col-lg-4 text-center border-inner">
           <div class="d-inline-flex align-items-center justify-content-center">
-            <a href="index.html" class="navbar-brand">
+            <a href="index.php" class="navbar-brand">
               <img src="static/images/logo-b.png" class="logo" />
             </a>
           </div>
@@ -46,7 +46,7 @@
       </div>
       <nav
         class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-3 px-lg-0 navbar-otherpage">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
+        <a href="index.php" class="navbar-brand d-block d-lg-none">
           <h1 class="m-0 text-uppercase text-white">
             <i class="fa fa-birthday-cake fs-1 text-primary me-3"></i>
             Chariox
@@ -61,30 +61,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto mx-lg-auto py-0">
-            <a href="index.html" class="nav-item nav-link nav-pd fw-bolder">
+            <a href="index.php" class="nav-item nav-link nav-pd fw-bolder">
               Home
             </a>
-            <a href="about-us.html" class="nav-item nav-link nav-pd fw-bolder">
+            <a href="about-us.php" class="nav-item nav-link nav-pd fw-bolder">
               About
             </a>
-            <a href="tyre.html" class="nav-item nav-link nav-pd fw-bolder">
+            <a href="tyre.php" class="nav-item nav-link nav-pd fw-bolder">
               Tyre
             </a>
-            <a href="gallery.html" class="nav-item nav-link nav-pd fw-bolder">
+            <a href="gallery.php" class="nav-item nav-link nav-pd fw-bolder">
               Gallery
             </a>
             <a
-              href="find-dealer.html"
+              href="find-dealer.php"
               class="nav-item nav-link active nav-pd fw-bolder">
               Find Dealers
             </a>
             <a
-              href="tech-knowledge.html"
+              href="tech-knowledge.php"
               class="nav-item nav-link nav-pd fw-bolder">
               Tech & Knowledge
             </a>
             <a
-              href="contact-us.html"
+              href="contact-us.php"
               class="nav-item nav-link nav-pd fw-bolder">
               Contact Us
             </a>
