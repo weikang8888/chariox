@@ -75,7 +75,7 @@ if (isset($_POST['send'])) {
 
   <body>
     <!-- Topbar Start -->
-    <?php include 'header.php'?>
+    <?php $page='contact'; include 'header.php'?>
     <!-- Topbar End -->
 
     <article class="chariox-content background-black">

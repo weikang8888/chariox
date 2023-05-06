@@ -15,7 +15,7 @@
 
   <body>
     <!-- Topbar Start -->
-    <?php include 'header.php'?>
+    <?php $page='gallery'; include 'header.php'?>
     <!-- Topbar End -->
 
     <article class="chariox-content background-black">

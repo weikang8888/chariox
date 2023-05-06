@@ -16,7 +16,7 @@
 
   <body class="">
     <!-- Topbar Start -->
-    <?php include 'header.php'?>
+    <?php $page='about'; include 'header.php'?>
     <!-- Topbar End -->
 
     <article class="chariox-content background-black">

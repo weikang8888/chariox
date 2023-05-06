@@ -17,7 +17,7 @@
 
   <body>
     <!-- Topbar Start -->
-    <?php include 'header.php'?>
+    <?php $page='tyre'; include 'header.php'?>
     <!-- Topbar End -->
 
     <article class="chariox-content background-black">
