@@ -2,9 +2,7 @@
 // Include the database configuration file
 require_once 'config.php';
 
-// Fetch the marker info from the database
-$result = $conn->query("SELECT * FROM map"); // Fetch the info-window data from the $result2 =
-$conn->query("SELECT * FROM map"); ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +98,7 @@ $conn->query("SELECT * FROM map"); ?>
     </div>
     <!-- Topbar End -->
 
-    <div class="find-dealer-container mb-6">
+    <div class="find-dealer-container">
       <section class="find-dealer-search-section">
         <div class="find-dealer-search">
           <div class="find-dealer-search-container">
@@ -119,13 +117,19 @@ $conn->query("SELECT * FROM map"); ?>
         <div class="find-dealer-result">
           <div class="find-dealer-result-list">
             <ul>
-              <li class="find-dealer-result-card" id="1">
+            <?php
+              $query = "SELECT * FROM map";
+              $resultset = mysqli_query($conn, $query);
+              // Free result set
+              foreach ($resultset as $row) {
+            ?>
+              <li class="find-dealer-result-card" id=<?php echo $row['id']; ?>>
                 <div class="find-dealer-result-card-container">
                   <div class="find-dealer-result-card-header">
                     <div class="find-dealer-result-card-header-distance">
-                      <div class="markericon">A</div>
+                      <div class="markericon"><?php echo $row['char']; ?></div>
                       <div class="find-dealer-result-card-header-range">
-                        2.9km
+                        <?php echo $row['km']; ?>
                       </div>
                     </div>
                     <div class="find-dealer-result-card-header-logo">
@@ -136,103 +140,12 @@ $conn->query("SELECT * FROM map"); ?>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="find-dealer-result-card" id="2">
-                <div class="find-dealer-result-card-container">
-                  <div class="find-dealer-result-card-header">
-                    <div class="find-dealer-result-card-header-distance">
-                      <div class="markericon">B</div>
-                      <div class="find-dealer-result-card-header-range">
-                        2.9km
-                      </div>
-                    </div>
-                    <div class="find-dealer-result-card-header-logo">
-                      <div>
-                        <img
-                          src="static/images/other/result-card-logo.png"
-                          class="find-dealer-result-card-header-logo-network" />
-                      </div>
-                    </div>
+                  <div class="find-dealer-result-card-bottom">
+                  <?php echo $row['name']; ?>
                   </div>
                 </div>
               </li>
-              <li class="find-dealer-result-card" id="3">
-                <div class="find-dealer-result-card-container">
-                  <div class="find-dealer-result-card-header">
-                    <div class="find-dealer-result-card-header-distance">
-                      <div class="markericon">C</div>
-                      <div class="find-dealer-result-card-header-range">
-                        2.9km
-                      </div>
-                    </div>
-                    <div class="find-dealer-result-card-header-logo">
-                      <div>
-                        <img
-                          src="static/images/other/result-card-logo.png"
-                          class="find-dealer-result-card-header-logo-network" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="find-dealer-result-card" id="4">
-                <div class="find-dealer-result-card-container">
-                  <div class="find-dealer-result-card-header">
-                    <div class="find-dealer-result-card-header-distance">
-                      <div class="markericon">D</div>
-                      <div class="find-dealer-result-card-header-range">
-                        2.9km
-                      </div>
-                    </div>
-                    <div class="find-dealer-result-card-header-logo">
-                      <div>
-                        <img
-                          src="static/images/other/result-card-logo.png"
-                          class="find-dealer-result-card-header-logo-network" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="find-dealer-result-card" id="5">
-                <div class="find-dealer-result-card-container">
-                  <div class="find-dealer-result-card-header">
-                    <div class="find-dealer-result-card-header-distance">
-                      <div class="markericon">E</div>
-                      <div class="find-dealer-result-card-header-range">
-                        2.9km
-                      </div>
-                    </div>
-                    <div class="find-dealer-result-card-header-logo">
-                      <div>
-                        <img
-                          src="static/images/other/result-card-logo.png"
-                          class="find-dealer-result-card-header-logo-network" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="find-dealer-result-card" id="6">
-                <div class="find-dealer-result-card-container">
-                  <div class="find-dealer-result-card-header">
-                    <div class="find-dealer-result-card-header-distance">
-                      <div class="markericon">F</div>
-                      <div class="find-dealer-result-card-header-range">
-                        2.9km
-                      </div>
-                    </div>
-                    <div class="find-dealer-result-card-header-logo">
-                      <div>
-                        <img
-                          src="static/images/other/result-card-logo.png"
-                          class="find-dealer-result-card-header-logo-network" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              <?php }?>
             </ul>
           </div>
         </div>
@@ -243,7 +156,6 @@ $conn->query("SELECT * FROM map"); ?>
     </div>
 
     <!-- Footer Start -->
-    <?php include 'footer.php'?>
     <!-- Footer End -->
   </body>
 
@@ -258,59 +170,20 @@ $conn->query("SELECT * FROM map"); ?>
           center: myLatLng,
       });
 
-      // const points = [
-      //   [
-      //     "1",
-      //     "A",
-      //     2.5087898859664874,
-      //     102.81350169244817,
-      //     `<p class="text-black">This is A</p>`,
-      //   ],
-      //   [
-      //     "2",
-      //     "B",
-      //     2.49374240185527,
-      //     102.85897342292282,
-      //     `<p class="text-black">This is B</p>`,
-      //   ],
-      //   [
-      //     "3",
-      //     "C",
-      //     2.5011472088163056,
-      //     102.85658834825935,
-      //     `<p class="text-black">This is C</p>`,
-      //   ],
-      //   [
-      //     "4",
-      //     "D",
-      //     2.4962957222302466,
-      //     102.84687128163006,
-      //     `<p class="text-black">This is D</p>`,
-      //   ],
-      //   [
-      //     "5",
-      //     "E",
-      //     2.497437795877134,
-      //     102.82664195090041,
-      //     `<p class="text-black">This is E</p>`,
-      //   ],
-      //   [
-      //     "6",
-      //     "F",
-      //     2.5240773782823474,
-      //     102.81155653701249,
-      //     `<p class="text-black">This is F</p>`,
-      //   ],
-      // ];
+      
       const points = [
-        <?php if($result->num_rows > 0){
-          while($row = $result->fetch_assoc()){
-            echo '["'.$row['id'].'",
-            "'.$row['name'].'",
-            '.$row['latitude'].',
-            '.$row['longitude'].',
-            `<p class="text-black">'.$row['info'].'</p>`], ';
-            }
+        <?php 
+            $result = $conn->query("SELECT * FROM map WHERE id");
+            if ($result->num_rows > 0) {
+               while ($row = $result->fetch_assoc()) {
+            echo '[
+              "' . $row['id'] . '",
+              "' . $row['char'] . '",
+              ' . $row['latitude'] . ',
+              ' . $row['longitude'] . ',
+              `<p class="map-info">' . $row['info'] . '</p>`, 
+              `<p class="map-address">' . $row['address'] . '</p>`],';
+          }
         }?>
       ];
 
@@ -339,25 +212,35 @@ $conn->query("SELECT * FROM map"); ?>
           id: points[i][0], // Set the marker's ID
         });
         const detailWindow = new google.maps.InfoWindow({
-          content: points[i][4],
+            content: points[i][4] + '<br>' + points[i][5],
+            maxWidth: 300,
+
         });
 
-        marker.addListener("mouseover", () => {
-          detailWindow.open(map, marker);
+        // marker.addListener("mouseover", () => {
+        //   detailWindow.open(map, marker);
 
-          if (mouseoverInfoWindow) {
-            mouseoverInfoWindow.close();
-          }
-          detailWindow.open(map, marker);
-          mouseoverInfoWindow = detailWindow;
-        });
+        //   if (mouseoverInfoWindow) {
+        //     mouseoverInfoWindow.close();
+        //   }
+        //   detailWindow.open(map, marker);
+        //   mouseoverInfoWindow = detailWindow;
+        // });
 
         const resultcard = document.querySelectorAll(".markericon");
-        const markerIds = ["1", "2", "3", "4", "5", "6"];
+        const markerIds = 
+        <?php
+          $result = $conn->query("SELECT id FROM map");
+          $ids = [];
+          while ($row = $result->fetch_assoc()) {
+            $ids[] = $row['id'];
+          }
+          echo json_encode($ids);
+          ?>
+        ;
         const resultCardBox = document.querySelectorAll(".find-dealer-result-card");
 
         var activeInfoWindow;
-        var mouseoverInfoWindow;
         var selectedMarker;
         var prevSelectedElement;
 
@@ -395,7 +278,11 @@ $conn->query("SELECT * FROM map"); ?>
                 console.log(marker.id);
                 const element = document.getElementById(marker.id);
                 if (element) {
-                  element.scrollIntoView();
+                  element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'center'
+                  });
 
                   if (prevSelectedElement) {
                     prevSelectedElement.classList.remove(
@@ -428,6 +315,7 @@ $conn->query("SELECT * FROM map"); ?>
 
             resultCardBox[i].addEventListener("click", function () {
               if (markerIds[i] === marker.id) {
+                console.log(marker.id);
                 map.setZoom(16);
                 map.setCenter(marker.getPosition());
                 const element = document.getElementById(marker.id);

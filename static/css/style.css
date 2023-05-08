@@ -1539,13 +1539,21 @@ textarea {
   padding: 2rem 2rem 0;
 }
 
+.find-dealer-result-card-bottom{
+  color: var(--bs-black);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
 .find-dealer-result-card-header-distance {
   align-items: center;
   display: flex;
   flex-direction: column;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #27509b;
+  color: var(--bs-black);
 }
 
 .markericon {
@@ -1589,5 +1597,20 @@ textarea {
   object-fit: contain;
   max-width: 9.2rem;
   width: 9.2rem;
+}
+
+.map-info,.map-address{
+  color:var(--bs-black);
+  margin-bottom: 0;
+}
+
+.map-info{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#map div[role="dialog"] button[title="Close"] {
+  right: 3px !important;
+  top: 3px !important;
 }
 /* Find Dealer End*/
