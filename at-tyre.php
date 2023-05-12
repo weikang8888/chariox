@@ -18,7 +18,7 @@
 
   <body>
     <!-- Topbar Start -->
-    <?php $page='tyre'; include 'header.php'?>
+    <?php $page = 'tyre';include 'header.php'?>
     <!-- Topbar End -->
 
     <article class="chariox-content background-black">
@@ -182,7 +182,9 @@
         <div class="container">
           <div class="row relative tyre360-container-height">
             <div class="col-6 text-center fst-italic tyre-shadow">
-              <img src="static/images/tyre/tyre-at.png" class="tyre360-tyre" />
+              <!-- <img src="static/images/tyre/360_at-tyre/tyres_at01.png" class="tyre360-tyre" id="tyre_viewer"/> -->
+              <div id="tyre_viewer" class="tyre360-tyre"></div>
+
               <img
                 src="static/images/tyre/tyre-ground.png"
                 class="tyre360-ground" />
@@ -351,5 +353,21 @@
       percentage: false,
       animation: true,
     });
+  </script>
+  <script src="static/js/360-viewer.js"></script>
+  <script>
+    var productViewer = new ProductViewer ({
+      element: document.getElementById('tyre_viewer'),
+      imagePath: './static/images/tyre/360_at-tyre/',
+      filePrefix: 'tyres_at',
+      fileExtension: '.png',
+    });
+
+    // if you want to see it will roted 360 deg once it loaded then you have to write some extra code
+
+    ProductViewer.once('loaded', function (){
+      ProductViewer.animate360();
+    })
+
   </script>
 </html>

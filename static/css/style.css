@@ -1127,10 +1127,13 @@ video {
 }
 .tyre360-tyre {
   position: absolute;
-  left: -23px;
   top: 7px;
-  width: 610px;
   z-index: 2;
+  cursor: pointer;
+}
+
+.product-viewer__image {
+  width: 460px;
 }
 
 .tyre360-ground {
@@ -1162,7 +1165,7 @@ video {
   padding: 8px 5px;
   position: absolute;
   bottom: 140px;
-  left: 200px;
+  left: 140px;
   z-index: 3;
 }
 
@@ -1222,13 +1225,13 @@ video {
   height: 70vh;
 }
 
-.success-message{
-  color:var(--bs-green);
+.success-message {
+  color: var(--bs-green);
   background: var(--bs-success);
 }
 
-.error-message{
-  color:var(--bs-danger);
+.error-message {
+  color: var(--bs-danger);
   background: var(--bs-red);
 }
 
@@ -1539,7 +1542,7 @@ textarea {
   padding: 2rem 2rem 0;
 }
 
-.find-dealer-result-card-bottom{
+.find-dealer-result-card-bottom {
   color: var(--bs-black);
   text-transform: uppercase;
   font-weight: bold;
@@ -1599,12 +1602,13 @@ textarea {
   width: 9.2rem;
 }
 
-.map-info,.map-address{
-  color:var(--bs-black);
+.map-info,
+.map-address {
+  color: var(--bs-black);
   margin-bottom: 0;
 }
 
-.map-info{
+.map-info {
   font-weight: bold;
   text-transform: uppercase;
 }
