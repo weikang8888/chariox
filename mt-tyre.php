@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/bootstrap.css" />
     <link rel="stylesheet" href="static/css/font.css" />
+    <link rel="stylesheet" href="static/css/progressbar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -181,7 +182,8 @@
         <div class="container">
           <div class="row relative tyre360-container-height">
             <div class="col-6 text-center fst-italic tyre-shadow">
-              <img src="static/images/tyre/tyre-at.png" class="tyre360-tyre" />
+              <!-- <img src="static/images/tyre/360_at-tyre/tyres_at01.png" class="tyre360-tyre" id="tyre_viewer"/> -->
+              <div id="tyre_viewer" class="tyre360-tyre"></div>
               <img
                 src="static/images/tyre/tyre-ground.png"
                 class="tyre360-ground" />
@@ -198,7 +200,7 @@
               </div>
             </div>
             <div class="col text-start">
-              <h2 class="content-title mb-5">Performance Gradings</h2>
+              <h2 class="content-title mb-4">Performance Gradings</h2>
               <div class="col-sm-11">
                 <ul class="ps-sm-0">
                   <li class="row my-2">
@@ -207,10 +209,10 @@
                         Dry Handling
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 70%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="70"
+                        data-target="70">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -221,10 +223,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Tread Wead</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 80%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="80"
+                        data-target="80">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -237,10 +239,10 @@
                         Ride Comfort
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 60%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="60"
+                        data-target="60">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -251,10 +253,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Wet Braking</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 70%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="70"
+                        data-target="70">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -265,10 +267,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Quiet Ride</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 65%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="65"
+                        data-target="65">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -281,10 +283,10 @@
                         Winter Performance
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 70%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="70"
+                        data-target="70">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -295,10 +297,10 @@
                     <div class="col-9">
                       <span class="fst-italic text-uppercase">Off Road</span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 90%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="90"
+                        data-target="90">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -311,10 +313,10 @@
                         Fuel Efficiency
                       </span>
                       <div
-                        class="progress align-items-center parallelogram ps-1">
-                        <div
-                          class="progress-bar parallelogram"
-                          style="width: 60%"></div>
+                        class="progress align-items-center parallelogram ps-1 progressbar1"
+                        data-width="60"
+                        data-target="60">
+                        <div class="progress-bar parallelogram"></div>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -338,6 +340,28 @@
     AOS.init({
       duration: 3000,
       once: true,
+    });
+  </script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+   <script src="static/js/progressbar.js"></script>
+  <script>
+    // Display the progress bar calling progressbar.js
+    $(".progressbar1").progressBar({
+      shadow: true,
+      percentage: false,
+      animation: true,
+    });
+  </script>
+  <script src="static/js/360-viewer.js"></script>
+  <script>
+    var productViewer = new ProductViewer ({
+      element: document.getElementById('tyre_viewer'),
+      imagePath: './static/images/tyre/360_mt-tyre/',
+      filePrefix: 'tyres_mt',
+      fileExtension: '.png',
     });
   </script>
 </html>

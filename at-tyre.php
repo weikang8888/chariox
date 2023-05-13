@@ -362,12 +362,5 @@
       filePrefix: 'tyres_at',
       fileExtension: '.png',
     });
-
-    // if you want to see it will roted 360 deg once it loaded then you have to write some extra code
-
-    ProductViewer.once('loaded', function (){
-      ProductViewer.animate360();
-    })
-
   </script>
 </html>
